@@ -12,4 +12,5 @@ setuptools.setup(
     author_email='lu.k.philippe@gmail.com, me.barrut@gmail.com',
     description='RODeco a read only function decorator',
     packages=['RODeco'],
+    long_description=open('README').read(),
 )

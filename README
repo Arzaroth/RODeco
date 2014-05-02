@@ -1,1 +1,24 @@
 RODeco a read only function decorator
+
+Use Cases
+---------
+
+Let's say you're using a python module, and you don't like an inner working.
+This module allows you to override any function inside a module, at run-time, as long it is not a builtin.
+
+Afterwards, any call to this function, by anyone (you, or the module itself), will use what you defined.
+
+Example
+-------
+
+     import os
+
+     os.path.basename('./test') # Will output "test"
+
+     import RODeco
+
+     @RODeco.RODeco(os.path.basename, "_old_basename")
+     def newbasename(s):
+         return "~/" + _old_basename(s)
+
+     os.path.basename('./test') # Will output "~/test"
