@@ -1,4 +1,4 @@
-from RODeco import RODeco, RODecoException
+from .RODeco import RODeco, RODecoException
 
 __all__ = [
     'RODeco',
